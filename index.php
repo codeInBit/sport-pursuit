@@ -22,15 +22,15 @@ class Duration
 						$arrayOfJourneyDuration[] = $this->journeyDuration($data);
 					} 
 				}
-	
+
+				fclose($open);
+				
 				if (!$arrayOfJourneyDuration) {
 					return "Sorry, there are no valid records in the CSV report";	
 				}
 
 				$averageDuration = $this->averageJourneyDuration($arrayOfJourneyDuration);
 				$formatAverageDuration = date("H:i:s", $averageDuration);
-			
-				fclose($open);
 			} else {
 				return "CSV file doesn't exist in current working directory";
 			}
