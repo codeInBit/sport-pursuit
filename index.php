@@ -7,6 +7,7 @@ class Duration
 {
 	/**
 	 * Read CSV report and retun average journey duration
+	 * 
      * @return string
 	 */
 	public function averageDuration(): string
@@ -24,7 +25,7 @@ class Duration
 				}
 
 				fclose($open);
-				
+
 				if (!$arrayOfJourneyDuration) {
 					return "Sorry, there are no valid records in the CSV report";	
 				}
@@ -59,7 +60,7 @@ class Duration
 	/**
 	 * @property array $duration
 	 * 
-     * @return int
+	 * @return int
 	 */
 	public function journeyDuration(array $record): int
 	{
@@ -75,8 +76,8 @@ class Duration
 	 *
 	 * @property string $dateTime1
 	 * @property string $dateTime2
-	 * 
-     * @return int
+	 *
+	 * @return int 
 	 */
 	public function dataTimeDifference($dateTime1, $dateTime2): int
 	{
@@ -88,7 +89,7 @@ class Duration
 	 *
 	 * @property array $duration
 	 * 
-     * @return int
+	 * @return int
 	 */
 	public function averageJourneyDuration(array $duration): int
 	{
